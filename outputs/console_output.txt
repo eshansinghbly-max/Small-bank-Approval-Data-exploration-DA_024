@@ -1,0 +1,97 @@
+BANK LOAN APPROVAL DATASET
+========================================
+
+First 5 records:
+  Loan_ID  Gender Married  ... Credit_History Property_Area Loan_Status
+0    L001    Male     Yes  ...              1         Urban           Y
+1    L002  Female      No  ...              1         Rural           N
+2    L003    Male     Yes  ...              1     Semiurban           Y
+3    L004    Male     Yes  ...              0         Rural           N
+4    L005  Female     Yes  ...              1         Urban           Y
+
+[5 rows x 11 columns]
+
+Dataset shape (rows, columns):
+(50, 11)
+
+Column names and data types:
+<class 'pandas.DataFrame'>
+RangeIndex: 50 entries, 0 to 49
+Data columns (total 11 columns):
+ #   Column           Non-Null Count  Dtype
+---  ------           --------------  -----
+ 0   Loan_ID          50 non-null     str  
+ 1   Gender           50 non-null     str  
+ 2   Married          50 non-null     str  
+ 3   Dependents       50 non-null     str  
+ 4   Education        50 non-null     str  
+ 5   Self_Employed    50 non-null     str  
+ 6   ApplicantIncome  50 non-null     int64
+ 7   LoanAmount       50 non-null     int64
+ 8   Credit_History   50 non-null     int64
+ 9   Property_Area    50 non-null     str  
+ 10  Loan_Status      50 non-null     str  
+dtypes: int64(3), str(8)
+memory usage: 4.4 KB
+
+Statistical summary of number columns:
+       ApplicantIncome  LoanAmount  Credit_History
+count        50.000000   50.000000       50.000000
+mean       4934.000000  123.400000        0.680000
+std        1808.439399   42.347445        0.471212
+min        2400.000000   60.000000        0.000000
+25%        3325.000000   90.000000        0.000000
+50%        4750.000000  115.000000        1.000000
+75%        6175.000000  150.000000        1.000000
+max        9000.000000  220.000000        1.000000
+
+Missing values in each column:
+Loan_ID            0
+Gender             0
+Married            0
+Dependents         0
+Education          0
+Self_Employed      0
+ApplicantIncome    0
+LoanAmount         0
+Credit_History     0
+Property_Area      0
+Loan_Status        0
+dtype: int64
+
+Number of duplicate rows:
+0
+
+Loan status count:
+Loan_Status
+Y    33
+N    17
+Name: count, dtype: int64
+
+Total applicants: 50
+Approved loans  : 33
+Rejected loans  : 17
+Approval rate   : 66.0 %
+Rejection rate  : 34.0 %
+
+Loan status by credit history (1 = good history, 0 = not good):
+Loan_Status      N   Y
+Credit_History        
+0               16   0
+1                1  33
+
+Loan status by education:
+Loan_Status    N   Y
+Education           
+Graduate       6  33
+Not Graduate  11   0
+
+Loan status by property area:
+Loan_Status    N   Y
+Property_Area       
+Rural          9   7
+Semiurban      3  13
+Urban          5  13
+
+Charts saved in the 'outputs' folder.
+Analysis completed successfully!
